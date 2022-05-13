@@ -1,20 +1,26 @@
-# ASP.NET
-# Build and test ASP.NET projects.
-# Add steps that publish symbols, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/apps/aspnet/build-aspnet-4
+# ASP.NET Core
+# Build and test ASP.NET Core projects targeting .NET Core.
+# Add steps that run tests, create a NuGet package, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
 trigger:
 - '*'
 
 pool:
+<<<<<<< HEAD
   vmImage: 'ubuntu-20.04'
   demands:
   - npm
+=======
+  vmImage: ubuntu-latest
+
+>>>>>>> e42c4409ca90513e1df3a58bd508967e9caff173
 
 variables:
   buildConfiguration: 'Release'
 
 steps:
+<<<<<<< HEAD
 - task: UseDotNet@2
   displayName: 'Use .NET SDK 5.x'
   inputs:
@@ -48,3 +54,7 @@ steps:
     command: 'build'
     arguments: '--no-restore --configuration Release'
     projects: '**/*.csproj'
+=======
+- script: dotnet build --configuration $(buildConfiguration)
+  displayName: 'dotnet build $(buildConfiguration)'
+>>>>>>> e42c4409ca90513e1df3a58bd508967e9caff173
