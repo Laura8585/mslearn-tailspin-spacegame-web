@@ -1,11 +1,11 @@
 ﻿/// <binding Clean='clean' />
 "use strict";
 
-import { task, series, src, dest } from "gulp";
-import rimraf from "rimraf";
-import concat from "gulp-concat";
-import cleanCSS from "gulp-clean-css";
-import uglify from "gulp-uglify";
+const gulp = require("gulp"),
+      rimraf = require("rimraf"),
+      concat = require("gulp-concat"),
+      cleanCSS = require("gulp-clean-css"),
+      uglify = require("gulp-uglify");
 
 const paths = {
   webroot: "./Tailspin.SpaceGame.Web/wwwroot/"
@@ -18,25 +18,25 @@ paths.minCss = paths.webroot + "css/**/*.min.css";
 paths.concatJsDest = paths.webroot + "js/site.min.js";
 paths.concatCssDest = paths.webroot + "css/site.min.css";
 
-task("clean:js", done => rimraf(paths.concatJsDest, done));
-task("clean:css", done => rimraf(paths.concatCssDest, done));
-task("clean", series(["clean:js", "clean:css"]));
+gulp.task("clean:js", done => rimraf(paths.concatJsDest, done));
+gulp.task("clean:css", done => rimraf(paths.concatCssDest, done));
+gulp.task("clean", gulp.series(["clean:js", "clean:css"]));
 
-task("min:js", () => {
-  return src([paths.js, "!" + paths.minJs], { base: "." })
+gulp.task("min:js", () => {
+  return gulp.src([paths.js, "!" + paths.minJs], { base: "." })
     .pipe(concat(paths.concatJsDest))
     .pipe(uglify())
-    .pipe(dest("."));
+    .pipe(gulp.dest("."));
 });
 
-task("min:css", () => {
-  return src([paths.css, "!" + paths.minCss])
+gulp.task("min:css", () => {
+  return gulp.src([paths.css, "!" + paths.minCss])
     .pipe(concat(paths.concatCssDest))
     .pipe(cleanCSS())
-    .pipe(dest("."));
+    .pipe(gulp.dest("."));
 });
 
-task("min", series(["min:js", "min:css"]));
+gulp.task("min", gulp.series(["min:js", "min:css"]));
 
 // A 'default' task is required by Gulp v4
-task("default", series(["min"]));
+gulp.task("default", gulp.series(["min"]));
