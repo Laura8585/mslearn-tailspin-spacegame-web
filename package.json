@@ -1,17 +1,1 @@
-{
-  "name": "package",
-  "version": "1.0.0",
-  "private": true,
-  "devDependencies": {
-    "gulp": "3.9.1",
-    "gulp-bower": "^0.0.13",
-    "gulp-config": "^0.3.0",
-    "gulp-less": "3.0.5",
-    "gulp-minify-css": "1.2.4",
-    "gulp-plumber": "1.1.0",
-    "gulp-watch": "4.3.5"
-  },
-  "dependencies": {
-    "gulp-browser": "^3.0.11"
-  }
-}
+{"devDependencies":{"gulp":"^3.9.1","gulp-clean-css":"^4.3.0","gulp-concat":"^2.6.1","gulp-uglify":"^3.0.0","jest":"^28.1.0","node-sass":"^7.0.1","rimraf":"^2.6.1"},"dependencies":{"package.json":"^2.0.1"}}
