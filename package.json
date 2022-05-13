@@ -1,14 +1,1 @@
-{ 
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-clean-css": "^4.2.0",
-    "gulp-concat": "2.6.1",
-    "gulp-uglify": "3.0.0",
-    "jest": "^28.1.0",
-    "node-sass": "^7.0.1",
-    "rimraf": "2.6.1"
-  },
-  "dependencies": {
-    "package.json": "^2.0.1"
-  }
-}
+{"devDependencies":{"gulp":"^3.9.1","gulp-clean-css":"^4.2.0","gulp-concat":"2.6.1","gulp-uglify":"3.0.0","jest":"^28.1.0","node-sass":"^7.0.1","rimraf":"2.6.1"},"dependencies":{"package.json":"^2.0.1"}}
