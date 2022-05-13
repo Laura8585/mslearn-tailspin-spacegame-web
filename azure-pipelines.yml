@@ -35,7 +35,7 @@ steps:
     gulpFile: 'gulpfile.js'
     targets: 'Rung the gulp Node.js'
     gulpjs: 'node_modules/gulp/bin/gulp.js'
-    enableCodeCoverage: false
+    enableCodeCoverage: true
 
 - task: VSBuild@1
   inputs:
