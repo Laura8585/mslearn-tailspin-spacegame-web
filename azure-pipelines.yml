@@ -25,17 +25,6 @@ steps:
   inputs:
     restoreSolution: '$(solution)'
 
-- task: NodeTool@0
-  inputs:
-    versionSpec: '6.x'
-    force32bit: true
-
-- task: gulp@0
-  inputs:
-    gulpFile: 'gulpfile.js'
-    targets: 'Rung the gulp Node.js'
-    gulpjs: 'node_modules/gulp/bin/gulp.js'
-    enableCodeCoverage: true
 
 - task: VSBuild@1
   inputs:
