@@ -1,4 +1,5 @@
-
+ [![Build Status](https://dev.azure.com/Tailspin0711/Space%20Game%20-%20web%20-%20Pipeline/_apis/build/status/Space%20Game%20-%20web?branchName=code-workflow)](https://dev.azure.com/Tailspin0711/Space%20Game%20-%20web%20-%20Pipeline/_build/latest?definitionId=9&branchName=code-workflow)
+ 
 # Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
