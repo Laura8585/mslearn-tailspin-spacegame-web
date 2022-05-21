@@ -35,7 +35,7 @@ bld/
 Generated\ Files/
 
 # MSTest test Results
-[Tt]est[Rr]esult*/
+#[Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
 
 # NUNIT
@@ -137,6 +137,8 @@ _TeamCity*
 # Visual Studio code coverage results
 *.coverage
 *.coveragexml
+
+[Cc]ode[Cc]overage/
 
 # NCrunch
 _NCrunch_*
